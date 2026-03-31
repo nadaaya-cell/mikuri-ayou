@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikuri Ayou Admin</title>
+  <link rel="stylesheet" href="admin-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Mikuri Ayou Admin</h1>
+  </header>
+
+  <section class="add-product">
+    <h2>Add a Product</h2>
+    <form id="productForm">
+      <input type="text" id="name" placeholder="Product Name" required>
+      <input type="text" id="price" placeholder="Price (e.g. $15)" required>
+      <input type="url" id="formLink" placeholder="Google Form Link" required>
+      <div class="file-upload">
+         <input type="file" id="image" accept="image/*" required>
+         <label for="image">+ Add Photo</label>
+       </div>
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <section class="preview">
+    <h2>Product Preview</h2>
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+  <section class="export">
+    <h2>Export Products</h2>
+    <button id="exportBtn">Copy HTML</button>
+    <textarea id="exportArea" readonly></textarea>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>
